@@ -141,6 +141,10 @@ func fileExists(filename string) bool {
 func runRootCommand(source string, destination string) error {
 	jww.FEEDBACK.Println("Running ")
 
+	if !fileExists(source) {
+		return errors.New("Source file does not exist. Please specify one using the --source flag")
+	}
+
 	sourceFile, sourceFileError := fs.Open(source)
 	if sourceFileError != nil {
 		return sourceFileError
