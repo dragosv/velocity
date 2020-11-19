@@ -86,8 +86,8 @@ func init() {
 
 	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "c", "config file (default is $HOME/.velocity)")
 
-	rootCmd.Flags().StringVarP(&source, "source", "s", "input.txt", "Source directory to read from")
-	rootCmd.Flags().StringVarP(&destination, "destination", "d", "output.txt", "Destination directory to write to")
+	rootCmd.Flags().StringVarP(&source, "source", "s", "input.txt", "Source file to read from")
+	rootCmd.Flags().StringVarP(&destination, "destination", "d", "output.txt", "Destination file to write to")
 	rootCmd.Flags().StringVarP(&databaseDialect, "dialect", "", "sqlite3", "Database dialect")
 	rootCmd.Flags().StringVarP(&databaseConnection, "connection", "", "file:velocity.sqlite", "Database connection string")
 
